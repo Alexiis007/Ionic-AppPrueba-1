@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Product List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let i of products" style="margin: 30px;">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{i.name}}</ion-card-title>
+        <ion-card-subtitle>{{i.category}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{i.description}}
+        <ion-thumbnail>
+          <img src="{{i.image}}"/>
+        </ion-thumbnail>
+      </ion-card-content>
+      <ion-card button color="primary">
+        Compra por solo {{i.price}}
+      </ion-card>
+    </ion-card>
+    </div>
+</ion-content>
